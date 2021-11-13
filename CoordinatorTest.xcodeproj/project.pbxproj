@@ -95,6 +95,7 @@
 		3882A1529308A10D8F6A8AA8 /* Pods-CoordinatorTest-CoordinatorTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest-CoordinatorTestUITests.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest-CoordinatorTestUITests/Pods-CoordinatorTest-CoordinatorTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4B18911AD66740F6FCCF5E7A /* Pods_CoordinatorTest_CoordinatorTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoordinatorTest_CoordinatorTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DF43E1C273F4CC800FC8699 /* CoordinatorTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoordinatorTest.entitlements; sourceTree = "<group>"; };
 		A81D2322C6C595023582F7D6 /* Pods-CoordinatorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest/Pods-CoordinatorTest.release.xcconfig"; sourceTree = "<group>"; };
 		B972FC40D99A3CEFC310685E /* Pods-CoordinatorTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest.debug.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest/Pods-CoordinatorTest.debug.xcconfig"; sourceTree = "<group>"; };
 		C45759F1C1D2636A9DF42F25 /* Pods_CoordinatorTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoordinatorTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +163,7 @@
 				059EAD7027277EA10091DCC8 /* LaunchScreen.storyboard */,
 				059EAD7327277EA10091DCC8 /* Info.plist */,
 				4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */,
+				4DF43E1C273F4CC800FC8699 /* CoordinatorTest.entitlements */,
 			);
 			path = CoordinatorTest;
 			sourceTree = "<group>";
@@ -285,7 +287,6 @@
 				2744BE8D042FA2F7EB925091 /* Pods-CoordinatorTestTests.debug.xcconfig */,
 				11519F6296A789C1A5381173 /* Pods-CoordinatorTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -727,6 +728,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoordinatorTest/CoordinatorTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2XG799ZL5A;
@@ -756,6 +758,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoordinatorTest/CoordinatorTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2XG799ZL5A;

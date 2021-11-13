@@ -7,6 +7,7 @@ target 'CoordinatorTest' do
 
   # Pods for CoordinatorTest
   pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
 
 
   target 'CoordinatorTestTests' do

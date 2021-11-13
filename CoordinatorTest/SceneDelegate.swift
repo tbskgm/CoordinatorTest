@@ -15,10 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        UNUserNotificationCenter.current().delegate = self
+        
         let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window.windowScene = windowScene
         
-        let coordinator = SceneCoordinator(window: window)
+        let launchType: SceneCoordinator.LaunchType = .normal
+        let coordinator = SceneCoordinator(window: window, launchType: launchType)
         coordinator.start()
         
         self.sceneCoordinator = coordinator
@@ -55,4 +58,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+extension SceneDelegate: UNUserNotificationCenterDelegate {
+    // バックグラウンド時、未起動時に通知される
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+        print(#function)
+        guard let window = self.window else { return }
 
+        let request = response.notification.request
+        let launchType: SceneCoordinator.LaunchType = .notification(request)
+
+        let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
+        sceneCoordinator.start()
+        self.sceneCoordinator = sceneCoordinator
+        //completionHandler()
+    }
+    
+    // フォアグラウンド時に通知される
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            print(#function)
+            completionHandler([.banner, .list, .sound])
+        }
+}
