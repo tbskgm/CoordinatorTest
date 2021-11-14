@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreSpotlight
 
 class SceneCoordinator: Coordinator {
     let window: UIWindow
@@ -18,6 +19,9 @@ class SceneCoordinator: Coordinator {
     enum LaunchType {
         case normal
         case notification(_ notification: UNNotificationRequest)
+        case userActivity(NSUserActivity)
+        case openURL(URL)
+        case shortCutItem(UIApplicationShortcutItem)
     }
     
     init(window: UIWindow, launchType: LaunchType) {
@@ -32,6 +36,7 @@ class SceneCoordinator: Coordinator {
         
         switch launchType {
         case .normal: // 通常起動ではlaunchTypeがnilなのでbreakを設定しています
+            print("normal")
             let storyboard = UIStoryboard(name: "TabBarController", bundle: nil)
             let tabBarController = storyboard.instantiateInitialViewController() as! TabBarController
             
@@ -42,6 +47,7 @@ class SceneCoordinator: Coordinator {
             window.rootViewController = tabBarController
             
         case .notification(let request):
+            print("notification+")
             if request.trigger is UNPushNotificationTrigger {
                 // remote notification
                 let userInfo = request.content.userInfo
@@ -61,6 +67,28 @@ class SceneCoordinator: Coordinator {
                 let viewController = storyboard.instantiateInitialViewController() as! LocalNotificationViewController
                 window.rootViewController = viewController
             }
+        case .userActivity(let userActivity):
+            switch userActivity.activityType {
+            case NSUserActivityTypeBrowsingWeb:
+                fatalError()
+                // universal links
+            case CSSearchableItemActionType:
+                // Core spotlight
+                print("CSSearchableItemActionType")
+                let storyboard = UIStoryboard(name: "CoreSpotlightView", bundle: nil)
+                let viewController = storyboard.instantiateInitialViewController() as! CoreSpotlightViewController
+                window.rootViewController = viewController
+            case CSQueryContinuationActionType:
+                // Core soptlight (incremental search)
+                print("CSQueryContinuationActionType")
+                window.rootViewController = UIViewController()
+            default:
+                fatalError("Unreachable userActivity: ’\(userActivity.activityType)'")
+            }
+        case .openURL(_):
+            window.rootViewController = UIViewController()
+        case .shortCutItem(_):
+            window.rootViewController = UIViewController()
         }
     }
 }

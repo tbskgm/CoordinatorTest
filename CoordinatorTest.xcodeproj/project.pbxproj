@@ -40,6 +40,10 @@
 		4D53DF2D2740CA380022B600 /* LocalNotificationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DF2C2740CA380022B600 /* LocalNotificationView.storyboard */; };
 		4D53DF312740CA940022B600 /* RemoteNotificationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DF302740CA940022B600 /* RemoteNotificationView.storyboard */; };
 		4D53DF332740CAA60022B600 /* RemoteNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DF322740CAA60022B600 /* RemoteNotificationViewController.swift */; };
+		4D5D930D2741050A00699B99 /* CoreSpotlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D930C2741050A00699B99 /* CoreSpotlightViewController.swift */; };
+		4D5D930F2741051D00699B99 /* CoreSpotlightView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D930E2741051D00699B99 /* CoreSpotlightView.storyboard */; };
+		4D5D9312274138CF00699B99 /* URLSchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D9311274138CF00699B99 /* URLSchemeViewController.swift */; };
+		4D5D9314274138FB00699B99 /* URLSchemeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */; };
 		4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */; };
 		5FCBAAA428306D165583DED4 /* Pods_CoordinatorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45759F1C1D2636A9DF42F25 /* Pods_CoordinatorTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -102,6 +106,10 @@
 		4D53DF2C2740CA380022B600 /* LocalNotificationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocalNotificationView.storyboard; sourceTree = "<group>"; };
 		4D53DF302740CA940022B600 /* RemoteNotificationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RemoteNotificationView.storyboard; sourceTree = "<group>"; };
 		4D53DF322740CAA60022B600 /* RemoteNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationViewController.swift; sourceTree = "<group>"; };
+		4D5D930C2741050A00699B99 /* CoreSpotlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSpotlightViewController.swift; sourceTree = "<group>"; };
+		4D5D930E2741051D00699B99 /* CoreSpotlightView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoreSpotlightView.storyboard; sourceTree = "<group>"; };
+		4D5D9311274138CF00699B99 /* URLSchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSchemeViewController.swift; sourceTree = "<group>"; };
+		4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = URLSchemeView.storyboard; sourceTree = "<group>"; };
 		4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DF43E1C273F4CC800FC8699 /* CoordinatorTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoordinatorTest.entitlements; sourceTree = "<group>"; };
 		A81D2322C6C595023582F7D6 /* Pods-CoordinatorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest/Pods-CoordinatorTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +175,7 @@
 				059EAD6727277E9F0091DCC8 /* SceneDelegate.swift */,
 				059EADB4272818EB0091DCC8 /* Coordinator */,
 				059EADB3272818C60091DCC8 /* Views */,
-				4D53DF292740C9DD0022B600 /* Notification */,
+				4D53DF292740C9DD0022B600 /* Other */,
 				059EAD6E27277EA10091DCC8 /* Assets.xcassets */,
 				059EAD7027277EA10091DCC8 /* LaunchScreen.storyboard */,
 				059EAD7327277EA10091DCC8 /* Info.plist */,
@@ -299,13 +307,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		4D53DF292740C9DD0022B600 /* Notification */ = {
+		4D53DF292740C9DD0022B600 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				4D53DF2F2740CA790022B600 /* RemoteNotification */,
 				4D53DF2E2740CA3E0022B600 /* LocalNotification */,
+				4D5D930B274104EE00699B99 /* Core Spotlight */,
+				4D5D93102741389700699B99 /* URLScheme */,
+				4D5D9315274139AB00699B99 /* New Group */,
 			);
-			path = Notification;
+			path = Other;
 			sourceTree = "<group>";
 		};
 		4D53DF2E2740CA3E0022B600 /* LocalNotification */ = {
@@ -324,6 +335,31 @@
 				4D53DF302740CA940022B600 /* RemoteNotificationView.storyboard */,
 			);
 			path = RemoteNotification;
+			sourceTree = "<group>";
+		};
+		4D5D930B274104EE00699B99 /* Core Spotlight */ = {
+			isa = PBXGroup;
+			children = (
+				4D5D930C2741050A00699B99 /* CoreSpotlightViewController.swift */,
+				4D5D930E2741051D00699B99 /* CoreSpotlightView.storyboard */,
+			);
+			path = "Core Spotlight";
+			sourceTree = "<group>";
+		};
+		4D5D93102741389700699B99 /* URLScheme */ = {
+			isa = PBXGroup;
+			children = (
+				4D5D9311274138CF00699B99 /* URLSchemeViewController.swift */,
+				4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */,
+			);
+			path = URLScheme;
+			sourceTree = "<group>";
+		};
+		4D5D9315274139AB00699B99 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,7 +471,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5D9314274138FB00699B99 /* URLSchemeView.storyboard in Resources */,
 				4D53DF2D2740CA380022B600 /* LocalNotificationView.storyboard in Resources */,
+				4D5D930F2741051D00699B99 /* CoreSpotlightView.storyboard in Resources */,
 				059EADC227284B400091DCC8 /* TabBarController.storyboard in Resources */,
 				05C5FA14272B7E5700A61007 /* Tab2SecondView.storyboard in Resources */,
 				4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */,
@@ -580,6 +618,7 @@
 				05C5FA09272B78A400A61007 /* Tab2FirstViewController.swift in Sources */,
 				059EADC027284B340091DCC8 /* TabBarController.swift in Sources */,
 				059EADB6272819200091DCC8 /* ViewCoordinator.swift in Sources */,
+				4D5D9312274138CF00699B99 /* URLSchemeViewController.swift in Sources */,
 				059EADBA272819E20091DCC8 /* SecondCoordinator.swift in Sources */,
 				059EAD6A27277E9F0091DCC8 /* Tab1FirstViewController.swift in Sources */,
 				05C5FA0E272B7AA000A61007 /* Tab2FirstCoordinator.swift in Sources */,
@@ -589,6 +628,7 @@
 				059EAD6827277E9F0091DCC8 /* SceneDelegate.swift in Sources */,
 				059EADBC27281B5D0091DCC8 /* ThirdCoordinator.swift in Sources */,
 				4D53DF2B2740CA220022B600 /* LocalNotificationViewController.swift in Sources */,
+				4D5D930D2741050A00699B99 /* CoreSpotlightViewController.swift in Sources */,
 				059EADB8272819390091DCC8 /* Coordinator.swift in Sources */,
 				05C5FA18272C1FA200A61007 /* Tab2SecondCoordinator.swift in Sources */,
 			);
