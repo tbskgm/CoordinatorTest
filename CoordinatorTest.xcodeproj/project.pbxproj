@@ -36,6 +36,10 @@
 		05C5FA18272C1FA200A61007 /* Tab2SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5FA17272C1FA200A61007 /* Tab2SecondCoordinator.swift */; };
 		3E3EF9AD021F99D91FA25782 /* Pods_CoordinatorTest_CoordinatorTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B18911AD66740F6FCCF5E7A /* Pods_CoordinatorTest_CoordinatorTestUITests.framework */; };
 		41AB7F2C0600722EF252131A /* Pods_CoordinatorTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F79B34717D8A956F486FA77 /* Pods_CoordinatorTest.framework */; };
+		4D53DF2B2740CA220022B600 /* LocalNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DF2A2740CA220022B600 /* LocalNotificationViewController.swift */; };
+		4D53DF2D2740CA380022B600 /* LocalNotificationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DF2C2740CA380022B600 /* LocalNotificationView.storyboard */; };
+		4D53DF312740CA940022B600 /* RemoteNotificationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DF302740CA940022B600 /* RemoteNotificationView.storyboard */; };
+		4D53DF332740CAA60022B600 /* RemoteNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DF322740CAA60022B600 /* RemoteNotificationViewController.swift */; };
 		4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */; };
 		5FCBAAA428306D165583DED4 /* Pods_CoordinatorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45759F1C1D2636A9DF42F25 /* Pods_CoordinatorTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +98,10 @@
 		2744BE8D042FA2F7EB925091 /* Pods-CoordinatorTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTestTests.debug.xcconfig"; path = "Target Support Files/Pods-CoordinatorTestTests/Pods-CoordinatorTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3882A1529308A10D8F6A8AA8 /* Pods-CoordinatorTest-CoordinatorTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest-CoordinatorTestUITests.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest-CoordinatorTestUITests/Pods-CoordinatorTest-CoordinatorTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4B18911AD66740F6FCCF5E7A /* Pods_CoordinatorTest_CoordinatorTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoordinatorTest_CoordinatorTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D53DF2A2740CA220022B600 /* LocalNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationViewController.swift; sourceTree = "<group>"; };
+		4D53DF2C2740CA380022B600 /* LocalNotificationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocalNotificationView.storyboard; sourceTree = "<group>"; };
+		4D53DF302740CA940022B600 /* RemoteNotificationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RemoteNotificationView.storyboard; sourceTree = "<group>"; };
+		4D53DF322740CAA60022B600 /* RemoteNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationViewController.swift; sourceTree = "<group>"; };
 		4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DF43E1C273F4CC800FC8699 /* CoordinatorTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoordinatorTest.entitlements; sourceTree = "<group>"; };
 		A81D2322C6C595023582F7D6 /* Pods-CoordinatorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest/Pods-CoordinatorTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 				059EAD6727277E9F0091DCC8 /* SceneDelegate.swift */,
 				059EADB4272818EB0091DCC8 /* Coordinator */,
 				059EADB3272818C60091DCC8 /* Views */,
+				4D53DF292740C9DD0022B600 /* Notification */,
 				059EAD6E27277EA10091DCC8 /* Assets.xcassets */,
 				059EAD7027277EA10091DCC8 /* LaunchScreen.storyboard */,
 				059EAD7327277EA10091DCC8 /* Info.plist */,
@@ -290,6 +299,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4D53DF292740C9DD0022B600 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				4D53DF2F2740CA790022B600 /* RemoteNotification */,
+				4D53DF2E2740CA3E0022B600 /* LocalNotification */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		4D53DF2E2740CA3E0022B600 /* LocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				4D53DF2A2740CA220022B600 /* LocalNotificationViewController.swift */,
+				4D53DF2C2740CA380022B600 /* LocalNotificationView.storyboard */,
+			);
+			path = LocalNotification;
+			sourceTree = "<group>";
+		};
+		4D53DF2F2740CA790022B600 /* RemoteNotification */ = {
+			isa = PBXGroup;
+			children = (
+				4D53DF322740CAA60022B600 /* RemoteNotificationViewController.swift */,
+				4D53DF302740CA940022B600 /* RemoteNotificationView.storyboard */,
+			);
+			path = RemoteNotification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D53DF2D2740CA380022B600 /* LocalNotificationView.storyboard in Resources */,
 				059EADC227284B400091DCC8 /* TabBarController.storyboard in Resources */,
 				05C5FA14272B7E5700A61007 /* Tab2SecondView.storyboard in Resources */,
 				4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */,
@@ -407,6 +444,7 @@
 				059EADB2272818830091DCC8 /* Tab1ThirdView.storyboard in Resources */,
 				059EAD6D27277E9F0091DCC8 /* Tab1FirstView.storyboard in Resources */,
 				05C5FA0B272B78C000A61007 /* Tab2FirstView.storyboard in Resources */,
+				4D53DF312740CA940022B600 /* RemoteNotificationView.storyboard in Resources */,
 				059EAD9627277F450091DCC8 /* Tab1SecondView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,9 +584,11 @@
 				059EAD6A27277E9F0091DCC8 /* Tab1FirstViewController.swift in Sources */,
 				05C5FA0E272B7AA000A61007 /* Tab2FirstCoordinator.swift in Sources */,
 				059EADB0272818780091DCC8 /* Tab1ThirdViewController.swift in Sources */,
+				4D53DF332740CAA60022B600 /* RemoteNotificationViewController.swift in Sources */,
 				059EAD6627277E9F0091DCC8 /* AppDelegate.swift in Sources */,
 				059EAD6827277E9F0091DCC8 /* SceneDelegate.swift in Sources */,
 				059EADBC27281B5D0091DCC8 /* ThirdCoordinator.swift in Sources */,
+				4D53DF2B2740CA220022B600 /* LocalNotificationViewController.swift in Sources */,
 				059EADB8272819390091DCC8 /* Coordinator.swift in Sources */,
 				05C5FA18272C1FA200A61007 /* Tab2SecondCoordinator.swift in Sources */,
 			);

@@ -18,8 +18,13 @@ class Tab1FirstViewController: UIViewController {
         
         // 通知許可の取得
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]){ (granted, _) in
-            if granted{
-                //UNUserNotificationCenter.current().delegate = self
+            if granted {
+                let application = UIApplication.shared
+                
+                DispatchQueue.main.async {
+                    // Apple Push Notificationサービスによるリモート通知の受信を登録します。
+                    application.registerForRemoteNotifications()
+                }
             }
         }
     }
@@ -31,7 +36,7 @@ class Tab1FirstViewController: UIViewController {
         content.body = "ローカル通知は通知されました"
         content.sound = UNNotificationSound.default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
         /// 通知リクエストを作成して登録する
         let request = UNNotificationRequest(identifier: "ローカル通知", content: content, trigger: trigger)
         
@@ -39,11 +44,6 @@ class Tab1FirstViewController: UIViewController {
         notificationCenter.add(request) { (error) in
         }
     }
-    
-    /// リモート通知を発行する
-    @IBAction func remoteNotificationButton(_ sender: Any) {
-    }
-    
     
     /// ローカル通知を作成
     @IBAction func notificationButton(_ sender: Any) {

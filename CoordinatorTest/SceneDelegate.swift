@@ -8,9 +8,10 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
     var sceneCoordinator: SceneCoordinator?
+    
+    private let gcmMessageIDKey = "gcm.message_id"
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -23,8 +24,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let launchType: SceneCoordinator.LaunchType = .normal
         let coordinator = SceneCoordinator(window: window, launchType: launchType)
         coordinator.start()
-        
-        
         
         
         self.sceneCoordinator = coordinator
@@ -63,7 +62,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 extension SceneDelegate: UNUserNotificationCenterDelegate {
     // バックグラウンド時、未起動時に通知される
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print(#function)
         guard let window = self.window else { return }
 
@@ -78,6 +77,13 @@ extension SceneDelegate: UNUserNotificationCenterDelegate {
     // フォアグラウンド時に通知される
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         print(#function)
+        
+        let userInfo = notification.request.content.userInfo
+        
+        if let messageID = userInfo[gcmMessageIDKey] {
+            print("Message ID: \(messageID)")
+        }
+        print(userInfo)
         completionHandler([.banner, .list, .sound])
     }
 }
