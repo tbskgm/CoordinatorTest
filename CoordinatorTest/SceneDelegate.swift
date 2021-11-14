@@ -72,6 +72,8 @@ extension SceneDelegate: UNUserNotificationCenterDelegate {
         let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
         sceneCoordinator.start()
         self.sceneCoordinator = sceneCoordinator
+        
+        completionHandler()
     }
     
     // フォアグラウンド時に通知される
