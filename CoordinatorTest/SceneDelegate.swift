@@ -24,6 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let coordinator = SceneCoordinator(window: window, launchType: launchType)
         coordinator.start()
         
+        
+        
+        
         self.sceneCoordinator = coordinator
         self.window = window
     }
@@ -70,15 +73,11 @@ extension SceneDelegate: UNUserNotificationCenterDelegate {
         let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
         sceneCoordinator.start()
         self.sceneCoordinator = sceneCoordinator
-        //completionHandler()
     }
     
     // フォアグラウンド時に通知される
-    func userNotificationCenter(
-        _ center: UNUserNotificationCenter,
-        willPresent notification: UNNotification,
-        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-            print(#function)
-            completionHandler([.banner, .list, .sound])
-        }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print(#function)
+        completionHandler([.banner, .list, .sound])
+    }
 }

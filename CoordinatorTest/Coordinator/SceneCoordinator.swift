@@ -41,6 +41,7 @@ class SceneCoordinator: Coordinator {
         case .notification(let request):
             if request.trigger is UNPushNotificationTrigger { // remote
                 // remote notification
+                window.rootViewController = UIViewController()
             } else if request.trigger is UNTimeIntervalNotificationTrigger { // local
                 // local notification
                 window.rootViewController = UIViewController()

@@ -32,6 +32,14 @@
                                     <action selector="notificationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OuN-pB-C5U"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72b-0G-qfQ">
+                                <rect key="frame" x="116" y="534.5" width="182" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="リモート通知を発行する"/>
+                                <connections>
+                                    <action selector="remoteNotificationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jrc-Ga-9wp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,6 +47,8 @@
                             <constraint firstItem="874-nj-isN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BFf-I8-hoc"/>
                             <constraint firstItem="874-nj-isN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFe-Q3-jkS"/>
                             <constraint firstItem="2MQ-Ez-7Gf" firstAttribute="top" secondItem="874-nj-isN" secondAttribute="bottom" constant="20" id="VC3-8x-JDD"/>
+                            <constraint firstItem="72b-0G-qfQ" firstAttribute="top" secondItem="2MQ-Ez-7Gf" secondAttribute="bottom" constant="20" id="YP2-6e-11t"/>
+                            <constraint firstItem="72b-0G-qfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b5C-QE-W5s"/>
                             <constraint firstItem="2MQ-Ez-7Gf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eT8-yV-HgM"/>
                         </constraints>
                     </view>

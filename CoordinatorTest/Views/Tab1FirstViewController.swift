@@ -40,7 +40,12 @@ class Tab1FirstViewController: UIViewController {
         }
     }
     
-    /// 通知を作成
+    /// リモート通知を発行する
+    @IBAction func remoteNotificationButton(_ sender: Any) {
+    }
+    
+    
+    /// ローカル通知を作成
     @IBAction func notificationButton(_ sender: Any) {
         addNotification()
     }
