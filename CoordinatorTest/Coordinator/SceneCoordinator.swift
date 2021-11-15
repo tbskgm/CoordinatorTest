@@ -70,17 +70,17 @@ class SceneCoordinator: Coordinator {
         case .userActivity(let userActivity):
             switch userActivity.activityType {
             case NSUserActivityTypeBrowsingWeb:
-                fatalError()
                 // universal links
+                let storyboard = UIStoryboard(name: "UniversalLinksView", bundle: nil)
+                let viewController = storyboard.instantiateInitialViewController() as! UniversalLinksViewController
+                window.rootViewController = viewController
             case CSSearchableItemActionType:
                 // Core spotlight
-                print("CSSearchableItemActionType")
                 let storyboard = UIStoryboard(name: "CoreSpotlightView", bundle: nil)
                 let viewController = storyboard.instantiateInitialViewController() as! CoreSpotlightViewController
                 window.rootViewController = viewController
             case CSQueryContinuationActionType:
                 // Core soptlight (incremental search)
-                print("CSQueryContinuationActionType")
                 window.rootViewController = UIViewController()
             default:
                 fatalError("Unreachable userActivity: ’\(userActivity.activityType)'")

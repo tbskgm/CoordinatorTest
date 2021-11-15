@@ -44,6 +44,8 @@
 		4D5D930F2741051D00699B99 /* CoreSpotlightView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D930E2741051D00699B99 /* CoreSpotlightView.storyboard */; };
 		4D5D9312274138CF00699B99 /* URLSchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D9311274138CF00699B99 /* URLSchemeViewController.swift */; };
 		4D5D9314274138FB00699B99 /* URLSchemeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */; };
+		4D5D931727416FEA00699B99 /* UniversalLinksView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D931627416FEA00699B99 /* UniversalLinksView.storyboard */; };
+		4D5D93192741705E00699B99 /* UniversalLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D93182741705E00699B99 /* UniversalLinksViewController.swift */; };
 		4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */; };
 		5FCBAAA428306D165583DED4 /* Pods_CoordinatorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45759F1C1D2636A9DF42F25 /* Pods_CoordinatorTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +112,8 @@
 		4D5D930E2741051D00699B99 /* CoreSpotlightView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoreSpotlightView.storyboard; sourceTree = "<group>"; };
 		4D5D9311274138CF00699B99 /* URLSchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSchemeViewController.swift; sourceTree = "<group>"; };
 		4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = URLSchemeView.storyboard; sourceTree = "<group>"; };
+		4D5D931627416FEA00699B99 /* UniversalLinksView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UniversalLinksView.storyboard; sourceTree = "<group>"; };
+		4D5D93182741705E00699B99 /* UniversalLinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLinksViewController.swift; sourceTree = "<group>"; };
 		4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DF43E1C273F4CC800FC8699 /* CoordinatorTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoordinatorTest.entitlements; sourceTree = "<group>"; };
 		A81D2322C6C595023582F7D6 /* Pods-CoordinatorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest/Pods-CoordinatorTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -314,7 +318,7 @@
 				4D53DF2E2740CA3E0022B600 /* LocalNotification */,
 				4D5D930B274104EE00699B99 /* Core Spotlight */,
 				4D5D93102741389700699B99 /* URLScheme */,
-				4D5D9315274139AB00699B99 /* New Group */,
+				4D5D9315274139AB00699B99 /* UniversalLinks */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -355,11 +359,13 @@
 			path = URLScheme;
 			sourceTree = "<group>";
 		};
-		4D5D9315274139AB00699B99 /* New Group */ = {
+		4D5D9315274139AB00699B99 /* UniversalLinks */ = {
 			isa = PBXGroup;
 			children = (
+				4D5D93182741705E00699B99 /* UniversalLinksViewController.swift */,
+				4D5D931627416FEA00699B99 /* UniversalLinksView.storyboard */,
 			);
-			path = "New Group";
+			path = UniversalLinks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,6 +480,7 @@
 				4D5D9314274138FB00699B99 /* URLSchemeView.storyboard in Resources */,
 				4D53DF2D2740CA380022B600 /* LocalNotificationView.storyboard in Resources */,
 				4D5D930F2741051D00699B99 /* CoreSpotlightView.storyboard in Resources */,
+				4D5D931727416FEA00699B99 /* UniversalLinksView.storyboard in Resources */,
 				059EADC227284B400091DCC8 /* TabBarController.storyboard in Resources */,
 				05C5FA14272B7E5700A61007 /* Tab2SecondView.storyboard in Resources */,
 				4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */,
@@ -616,6 +623,7 @@
 				059EADBE27283ED20091DCC8 /* SceneCoordinator.swift in Sources */,
 				059EADC427284BE10091DCC8 /* TabBarCoordinator.swift in Sources */,
 				05C5FA09272B78A400A61007 /* Tab2FirstViewController.swift in Sources */,
+				4D5D93192741705E00699B99 /* UniversalLinksViewController.swift in Sources */,
 				059EADC027284B340091DCC8 /* TabBarController.swift in Sources */,
 				059EADB6272819200091DCC8 /* ViewCoordinator.swift in Sources */,
 				4D5D9312274138CF00699B99 /* URLSchemeViewController.swift in Sources */,
@@ -809,8 +817,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CoordinatorTest/CoordinatorTest.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tsubasa Kogoma (SYQ2G24KB5)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2XG799ZL5A;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -827,7 +835,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tbskgm.CoordinatorTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "CoordinatorTest Provisioning Profiles";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -841,8 +849,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CoordinatorTest/CoordinatorTest.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2XG799ZL5A;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -859,7 +867,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tbskgm.CoordinatorTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "CoordinatorTest Provisioning Profiles";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

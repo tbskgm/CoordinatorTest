@@ -8,7 +8,7 @@ target 'CoordinatorTest' do
   # Pods for CoordinatorTest
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
-
+  pod 'Firebase/DynamicLinks'
 
   target 'CoordinatorTestTests' do
     inherit! :search_paths
