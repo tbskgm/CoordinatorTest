@@ -21,13 +21,72 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window.windowScene = windowScene
         
-        let launchType: SceneCoordinator.LaunchType = .normal
+        /// launchType
+        let launchType: SceneCoordinator.LaunchType!
+        
+        if connectionOptions.notificationResponse != nil {
+            // 通知
+            launchType = .notification((connectionOptions.notificationResponse?.notification.request)!)
+        }
+        else if connectionOptions.userActivities.first != nil {
+            // spotlight
+            let userActivity = connectionOptions.userActivities.first
+            launchType = .userActivity(userActivity!)
+        }
+        else if connectionOptions.urlContexts.first?.url != nil {
+            // URLスキーム
+            launchType = .openURL(connectionOptions.urlContexts.first!.url)
+        }
+        else if connectionOptions.shortcutItem != nil {
+            // Quick Action(3D Touch)
+            fatalError()
+            //launchType = .shortCutItem(connectionOptions.shortcutItem!)
+        } else {
+            // 通常起動
+            launchType = .normal
+        }
+        
         let coordinator = SceneCoordinator(window: window, launchType: launchType)
         coordinator.start()
         
-        
         self.sceneCoordinator = coordinator
         self.window = window
+    }
+    
+    // バックグラウンド時のspotlightが呼ばれる
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        guard let window = self.window else {
+            return
+        }
+        let launchType: SceneCoordinator.LaunchType = .userActivity(userActivity)
+        let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
+        sceneCoordinator.start()
+        self.sceneCoordinator = sceneCoordinator
+    }
+    
+    /// バックグラウンド時のURLスキームが呼ばれる
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let window = self.window else {
+            return
+        }
+        let url = URLContexts.first!.url
+        let launchType: SceneCoordinator.LaunchType = .openURL(url)
+        let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
+        sceneCoordinator.start()
+        self.sceneCoordinator = sceneCoordinator
+    }
+    
+    /// バックグラウンド時のQuick Action(3D Tuch)
+    func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem) async -> Bool {
+        guard let window = self.window else {
+            fatalError("後で実装")
+            // return
+        }
+        let launchType: SceneCoordinator.LaunchType = .shortCutItem(shortcutItem)
+        let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
+        sceneCoordinator.start()
+        self.sceneCoordinator = sceneCoordinator
+        return true
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
