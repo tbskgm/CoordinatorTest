@@ -34,13 +34,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             launchType = .userActivity(userActivity!)
         }
         else if connectionOptions.urlContexts.first?.url != nil {
-            // URLスキーム
-            launchType = .openURL(connectionOptions.urlContexts.first!.url)
+            // openURL
+            //launchType = .openURL(connectionOptions.urlContexts.first!.url)
+            launchType = .openURL
         }
         else if connectionOptions.shortcutItem != nil {
             // Quick Action(3D Touch)
-            fatalError()
-            //launchType = .shortCutItem(connectionOptions.shortcutItem!)
+            launchType = .shortCutItem(connectionOptions.shortcutItem!)
         } else {
             // 通常起動
             launchType = .normal
@@ -58,19 +58,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let window = self.window else {
             return
         }
-        let launchType: SceneCoordinator.LaunchType = .userActivity(userActivity)
+        let launchType: SceneCoordinator.LaunchType!
+        if userActivity.activityType == "ConfigurationIntent" {
+            launchType = .openURL
+        } else {
+            launchType = .userActivity(userActivity)
+        }
         let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
         sceneCoordinator.start()
         self.sceneCoordinator = sceneCoordinator
     }
     
-    /// バックグラウンド時のURLスキームが呼ばれる
+    /// バックグラウンド時のopenURLが呼ばれる
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         guard let window = self.window else {
             return
         }
         let url = URLContexts.first!.url
-        let launchType: SceneCoordinator.LaunchType = .openURL(url)
+        let launchType: SceneCoordinator.LaunchType = .openURL
         let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
         sceneCoordinator.start()
         self.sceneCoordinator = sceneCoordinator

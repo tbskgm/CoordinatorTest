@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Open URL View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="UICollectionViewController" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="OpenURLViewController" customModule="CoordinatorTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URLSheme画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-44-jdG">
-                                <rect key="frame" x="147" y="437.5" width="120" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OpenURL画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxL-wN-0kN">
+                                <rect key="frame" x="153" y="437.5" width="108" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,14 +26,14 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aAb-44-jdG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UHS-EY-DGT"/>
-                            <constraint firstItem="aAb-44-jdG" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="svT-eh-wUb"/>
+                            <constraint firstItem="fxL-wN-0kN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="La3-q0-MdE"/>
+                            <constraint firstItem="fxL-wN-0kN" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="phz-My-bxr"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="78"/>
+            <point key="canvasLocation" x="129" y="94"/>
         </scene>
     </scenes>
     <resources>
