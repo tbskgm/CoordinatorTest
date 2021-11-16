@@ -81,7 +81,9 @@ class SceneCoordinator: Coordinator {
                 window.rootViewController = viewController
             case CSQueryContinuationActionType:
                 // Core soptlight (incremental search)
-                window.rootViewController = UIViewController()
+                let storyboard = UIStoryboard(name: "IncrementalSearchView", bundle: nil)
+                let viewController = storyboard.instantiateInitialViewController() as! IncrementalSearchViewController
+                window.rootViewController = viewController
             default:
                 fatalError("Unreachable userActivity: ’\(userActivity.activityType)'")
             }

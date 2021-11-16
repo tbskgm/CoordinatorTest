@@ -39,6 +39,9 @@ class Tab1FirstViewController: UIViewController {
                 print("\(e)")
             }
         }
+        
+        // Core Spotlight(incremental search)
+        
     }
     
     func addNotification() {

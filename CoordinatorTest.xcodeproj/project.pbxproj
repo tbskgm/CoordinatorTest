@@ -46,6 +46,8 @@
 		4D5D9314274138FB00699B99 /* URLSchemeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */; };
 		4D5D931727416FEA00699B99 /* UniversalLinksView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D931627416FEA00699B99 /* UniversalLinksView.storyboard */; };
 		4D5D93192741705E00699B99 /* UniversalLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D93182741705E00699B99 /* UniversalLinksViewController.swift */; };
+		4D5D931C2742BD8B00699B99 /* IncrementalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D931B2742BD8A00699B99 /* IncrementalSearchViewController.swift */; };
+		4D5D931E2742BD9F00699B99 /* IncrementalSearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D931D2742BD9F00699B99 /* IncrementalSearchView.storyboard */; };
 		4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */; };
 		5FCBAAA428306D165583DED4 /* Pods_CoordinatorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45759F1C1D2636A9DF42F25 /* Pods_CoordinatorTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -114,6 +116,8 @@
 		4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = URLSchemeView.storyboard; sourceTree = "<group>"; };
 		4D5D931627416FEA00699B99 /* UniversalLinksView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UniversalLinksView.storyboard; sourceTree = "<group>"; };
 		4D5D93182741705E00699B99 /* UniversalLinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLinksViewController.swift; sourceTree = "<group>"; };
+		4D5D931B2742BD8A00699B99 /* IncrementalSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementalSearchViewController.swift; sourceTree = "<group>"; };
+		4D5D931D2742BD9F00699B99 /* IncrementalSearchView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IncrementalSearchView.storyboard; sourceTree = "<group>"; };
 		4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DF43E1C273F4CC800FC8699 /* CoordinatorTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoordinatorTest.entitlements; sourceTree = "<group>"; };
 		A81D2322C6C595023582F7D6 /* Pods-CoordinatorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest/Pods-CoordinatorTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -317,6 +321,7 @@
 				4D53DF2F2740CA790022B600 /* RemoteNotification */,
 				4D53DF2E2740CA3E0022B600 /* LocalNotification */,
 				4D5D930B274104EE00699B99 /* Core Spotlight */,
+				4D5D931A2742BD6200699B99 /* Core Spotlight(Incremental search) */,
 				4D5D93102741389700699B99 /* URLScheme */,
 				4D5D9315274139AB00699B99 /* UniversalLinks */,
 			);
@@ -366,6 +371,15 @@
 				4D5D931627416FEA00699B99 /* UniversalLinksView.storyboard */,
 			);
 			path = UniversalLinks;
+			sourceTree = "<group>";
+		};
+		4D5D931A2742BD6200699B99 /* Core Spotlight(Incremental search) */ = {
+			isa = PBXGroup;
+			children = (
+				4D5D931B2742BD8A00699B99 /* IncrementalSearchViewController.swift */,
+				4D5D931D2742BD9F00699B99 /* IncrementalSearchView.storyboard */,
+			);
+			path = "Core Spotlight(Incremental search)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,6 +497,7 @@
 				4D5D931727416FEA00699B99 /* UniversalLinksView.storyboard in Resources */,
 				059EADC227284B400091DCC8 /* TabBarController.storyboard in Resources */,
 				05C5FA14272B7E5700A61007 /* Tab2SecondView.storyboard in Resources */,
+				4D5D931E2742BD9F00699B99 /* IncrementalSearchView.storyboard in Resources */,
 				4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */,
 				059EAD7227277EA10091DCC8 /* LaunchScreen.storyboard in Resources */,
 				059EAD6F27277EA10091DCC8 /* Assets.xcassets in Resources */,
@@ -621,6 +636,7 @@
 				059EAD9827277F4F0091DCC8 /* Tab1SecondViewController.swift in Sources */,
 				05C5FA12272B7E3B00A61007 /* Tab2SecondViewController.swift in Sources */,
 				059EADBE27283ED20091DCC8 /* SceneCoordinator.swift in Sources */,
+				4D5D931C2742BD8B00699B99 /* IncrementalSearchViewController.swift in Sources */,
 				059EADC427284BE10091DCC8 /* TabBarCoordinator.swift in Sources */,
 				05C5FA09272B78A400A61007 /* Tab2FirstViewController.swift in Sources */,
 				4D5D93192741705E00699B99 /* UniversalLinksViewController.swift in Sources */,
