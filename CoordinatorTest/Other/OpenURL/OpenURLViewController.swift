@@ -1,13 +1,13 @@
 //
-//  URLSchemeViewController.swift
+//  OpenURLViewController.swift
 //  CoordinatorTest
 //
-//  Created by 小駒翼 on 2021/11/14.
+//  Created by 小駒翼 on 2021/11/16.
 //
 
 import UIKit
 
-class URLSchemeViewController: UIViewController {
+class OpenURLViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

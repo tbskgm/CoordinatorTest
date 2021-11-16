@@ -20,7 +20,8 @@ class SceneCoordinator: Coordinator {
         case normal
         case notification(_ notification: UNNotificationRequest)
         case userActivity(NSUserActivity)
-        case openURL(URL)
+        //case openURL(URL)
+        case openURL
         case shortCutItem(UIApplicationShortcutItem)
     }
     
@@ -82,13 +83,21 @@ class SceneCoordinator: Coordinator {
             case CSQueryContinuationActionType:
                 // Core soptlight (incremental search)
                 window.rootViewController = UIViewController()
+            case "ConfigurationIntent":
+                let storyboard = UIStoryboard(name: "OpenURLView", bundle: nil)
+                    let viewController = storyboard.instantiateInitialViewController() as! OpenURLViewController
+                    window.rootViewController = viewController
             default:
                 fatalError("Unreachable userActivity: ’\(userActivity.activityType)'")
             }
-        case .openURL(_):
-            window.rootViewController = UIViewController()
+        case .openURL:
+            let storyboard = UIStoryboard(name: "OpenURLView", bundle: nil)
+            let viewController = storyboard.instantiateInitialViewController() as! OpenURLViewController
+            window.rootViewController = viewController
         case .shortCutItem(_):
-            window.rootViewController = UIViewController()
+            let storyboard = UIStoryboard(name: "ShortCutItemView", bundle: nil)
+            let viewController = storyboard.instantiateInitialViewController() as! ShortCutItemViewController
+            window.rootViewController = viewController
         }
     }
 }

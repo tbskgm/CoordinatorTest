@@ -42,10 +42,19 @@
 		4D53DF332740CAA60022B600 /* RemoteNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DF322740CAA60022B600 /* RemoteNotificationViewController.swift */; };
 		4D5D930D2741050A00699B99 /* CoreSpotlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D930C2741050A00699B99 /* CoreSpotlightViewController.swift */; };
 		4D5D930F2741051D00699B99 /* CoreSpotlightView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D930E2741051D00699B99 /* CoreSpotlightView.storyboard */; };
-		4D5D9312274138CF00699B99 /* URLSchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D9311274138CF00699B99 /* URLSchemeViewController.swift */; };
-		4D5D9314274138FB00699B99 /* URLSchemeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */; };
 		4D5D931727416FEA00699B99 /* UniversalLinksView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D931627416FEA00699B99 /* UniversalLinksView.storyboard */; };
 		4D5D93192741705E00699B99 /* UniversalLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D93182741705E00699B99 /* UniversalLinksViewController.swift */; };
+		4D5D93252743F0C800699B99 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5D93242743F0C800699B99 /* WidgetKit.framework */; };
+		4D5D93272743F0C800699B99 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5D93262743F0C800699B99 /* SwiftUI.framework */; };
+		4D5D932A2743F0C800699B99 /* TestWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D93292743F0C800699B99 /* TestWidget.swift */; };
+		4D5D932D2743F0CE00699B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D932C2743F0CE00699B99 /* Assets.xcassets */; };
+		4D5D932F2743F0CE00699B99 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D932B2743F0C800699B99 /* Widget.intentdefinition */; };
+		4D5D93302743F0CE00699B99 /* Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D932B2743F0C800699B99 /* Widget.intentdefinition */; };
+		4D5D93332743F0CE00699B99 /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4D5D93232743F0C800699B99 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4D5D933D2743F38100699B99 /* OpenURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D933C2743F38100699B99 /* OpenURLViewController.swift */; };
+		4D5D933F2743F39200699B99 /* OpenURLView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D933E2743F39200699B99 /* OpenURLView.storyboard */; };
+		4D5D93412743F3EC00699B99 /* ShortCutItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D93402743F3EC00699B99 /* ShortCutItemViewController.swift */; };
+		4D5D93432743F40000699B99 /* ShortCutItemView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D93422743F40000699B99 /* ShortCutItemView.storyboard */; };
 		4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */; };
 		5FCBAAA428306D165583DED4 /* Pods_CoordinatorTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C45759F1C1D2636A9DF42F25 /* Pods_CoordinatorTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,7 +74,28 @@
 			remoteGlobalIDString = 059EAD6127277E9F0091DCC8;
 			remoteInfo = CoordinatorTest;
 		};
+		4D5D93312743F0CE00699B99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 059EAD5A27277E9F0091DCC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D5D93222743F0C800699B99;
+			remoteInfo = WidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D5D93342743F0CE00699B99 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4D5D93332743F0CE00699B99 /* WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		059EAD6227277E9F0091DCC8 /* CoordinatorTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,10 +140,19 @@
 		4D53DF322740CAA60022B600 /* RemoteNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationViewController.swift; sourceTree = "<group>"; };
 		4D5D930C2741050A00699B99 /* CoreSpotlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSpotlightViewController.swift; sourceTree = "<group>"; };
 		4D5D930E2741051D00699B99 /* CoreSpotlightView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoreSpotlightView.storyboard; sourceTree = "<group>"; };
-		4D5D9311274138CF00699B99 /* URLSchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSchemeViewController.swift; sourceTree = "<group>"; };
-		4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = URLSchemeView.storyboard; sourceTree = "<group>"; };
 		4D5D931627416FEA00699B99 /* UniversalLinksView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UniversalLinksView.storyboard; sourceTree = "<group>"; };
 		4D5D93182741705E00699B99 /* UniversalLinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalLinksViewController.swift; sourceTree = "<group>"; };
+		4D5D93232743F0C800699B99 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D5D93242743F0C800699B99 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4D5D93262743F0C800699B99 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4D5D93292743F0C800699B99 /* TestWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWidget.swift; sourceTree = "<group>"; };
+		4D5D932B2743F0C800699B99 /* Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Widget.intentdefinition; sourceTree = "<group>"; };
+		4D5D932C2743F0CE00699B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D5D932E2743F0CE00699B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D5D933C2743F38100699B99 /* OpenURLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLViewController.swift; sourceTree = "<group>"; };
+		4D5D933E2743F39200699B99 /* OpenURLView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpenURLView.storyboard; sourceTree = "<group>"; };
+		4D5D93402743F3EC00699B99 /* ShortCutItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCutItemViewController.swift; sourceTree = "<group>"; };
+		4D5D93422743F40000699B99 /* ShortCutItemView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShortCutItemView.storyboard; sourceTree = "<group>"; };
 		4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DF43E1C273F4CC800FC8699 /* CoordinatorTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoordinatorTest.entitlements; sourceTree = "<group>"; };
 		A81D2322C6C595023582F7D6 /* Pods-CoordinatorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest/Pods-CoordinatorTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +186,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D5D93202743F0C800699B99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D5D93272743F0C800699B99 /* SwiftUI.framework in Frameworks */,
+				4D5D93252743F0C800699B99 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -156,6 +204,7 @@
 				059EAD6427277E9F0091DCC8 /* CoordinatorTest */,
 				059EAD7B27277EA10091DCC8 /* CoordinatorTestTests */,
 				059EAD8527277EA10091DCC8 /* CoordinatorTestUITests */,
+				4D5D93282743F0C800699B99 /* Widget */,
 				059EAD6327277E9F0091DCC8 /* Products */,
 				2440A036E27A5574DFC191FA /* Pods */,
 				20C3C2F27770069DD53A3986 /* Frameworks */,
@@ -168,6 +217,7 @@
 				059EAD6227277E9F0091DCC8 /* CoordinatorTest.app */,
 				059EAD7827277EA10091DCC8 /* CoordinatorTestTests.xctest */,
 				059EAD8227277EA10091DCC8 /* CoordinatorTestUITests.xctest */,
+				4D5D93232743F0C800699B99 /* WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +344,8 @@
 				1F79B34717D8A956F486FA77 /* Pods_CoordinatorTest.framework */,
 				4B18911AD66740F6FCCF5E7A /* Pods_CoordinatorTest_CoordinatorTestUITests.framework */,
 				C45759F1C1D2636A9DF42F25 /* Pods_CoordinatorTestTests.framework */,
+				4D5D93242743F0C800699B99 /* WidgetKit.framework */,
+				4D5D93262743F0C800699B99 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -314,11 +366,10 @@
 		4D53DF292740C9DD0022B600 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				4D53DF2F2740CA790022B600 /* RemoteNotification */,
-				4D53DF2E2740CA3E0022B600 /* LocalNotification */,
-				4D5D930B274104EE00699B99 /* Core Spotlight */,
-				4D5D93102741389700699B99 /* URLScheme */,
-				4D5D9315274139AB00699B99 /* UniversalLinks */,
+				4D5D933A2743F2E600699B99 /* Notification */,
+				4D5D933B2743F31700699B99 /* UserActivity */,
+				4D5D93392743F2BE00699B99 /* OpenURL */,
+				4D5D93382743F2B700699B99 /* ShortCutItem */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -350,15 +401,6 @@
 			path = "Core Spotlight";
 			sourceTree = "<group>";
 		};
-		4D5D93102741389700699B99 /* URLScheme */ = {
-			isa = PBXGroup;
-			children = (
-				4D5D9311274138CF00699B99 /* URLSchemeViewController.swift */,
-				4D5D9313274138FB00699B99 /* URLSchemeView.storyboard */,
-			);
-			path = URLScheme;
-			sourceTree = "<group>";
-		};
 		4D5D9315274139AB00699B99 /* UniversalLinks */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +408,53 @@
 				4D5D931627416FEA00699B99 /* UniversalLinksView.storyboard */,
 			);
 			path = UniversalLinks;
+			sourceTree = "<group>";
+		};
+		4D5D93282743F0C800699B99 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				4D5D93292743F0C800699B99 /* TestWidget.swift */,
+				4D5D932B2743F0C800699B99 /* Widget.intentdefinition */,
+				4D5D932C2743F0CE00699B99 /* Assets.xcassets */,
+				4D5D932E2743F0CE00699B99 /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		4D5D93382743F2B700699B99 /* ShortCutItem */ = {
+			isa = PBXGroup;
+			children = (
+				4D5D93402743F3EC00699B99 /* ShortCutItemViewController.swift */,
+				4D5D93422743F40000699B99 /* ShortCutItemView.storyboard */,
+			);
+			path = ShortCutItem;
+			sourceTree = "<group>";
+		};
+		4D5D93392743F2BE00699B99 /* OpenURL */ = {
+			isa = PBXGroup;
+			children = (
+				4D5D933C2743F38100699B99 /* OpenURLViewController.swift */,
+				4D5D933E2743F39200699B99 /* OpenURLView.storyboard */,
+			);
+			path = OpenURL;
+			sourceTree = "<group>";
+		};
+		4D5D933A2743F2E600699B99 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				4D53DF2F2740CA790022B600 /* RemoteNotification */,
+				4D53DF2E2740CA3E0022B600 /* LocalNotification */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		4D5D933B2743F31700699B99 /* UserActivity */ = {
+			isa = PBXGroup;
+			children = (
+				4D5D930B274104EE00699B99 /* Core Spotlight */,
+				4D5D9315274139AB00699B99 /* UniversalLinks */,
+			);
+			path = UserActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,10 +469,12 @@
 				059EAD5F27277E9F0091DCC8 /* Frameworks */,
 				059EAD6027277E9F0091DCC8 /* Resources */,
 				135A30060CCF361C0E6DB719 /* [CP] Embed Pods Frameworks */,
+				4D5D93342743F0CE00699B99 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4D5D93322743F0CE00699B99 /* PBXTargetDependency */,
 			);
 			name = CoordinatorTest;
 			productName = CoordinatorTest;
@@ -429,6 +520,23 @@
 			productReference = 059EAD8227277EA10091DCC8 /* CoordinatorTestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4D5D93222743F0C800699B99 /* WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D5D93372743F0CE00699B99 /* Build configuration list for PBXNativeTarget "WidgetExtension" */;
+			buildPhases = (
+				4D5D931F2743F0C800699B99 /* Sources */,
+				4D5D93202743F0C800699B99 /* Frameworks */,
+				4D5D93212743F0C800699B99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetExtension;
+			productName = WidgetExtension;
+			productReference = 4D5D93232743F0C800699B99 /* WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -436,7 +544,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					059EAD6127277E9F0091DCC8 = {
@@ -449,6 +557,9 @@
 					059EAD8127277EA10091DCC8 = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 059EAD6127277E9F0091DCC8;
+					};
+					4D5D93222743F0C800699B99 = {
+						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
@@ -468,6 +579,7 @@
 				059EAD6127277E9F0091DCC8 /* CoordinatorTest */,
 				059EAD7727277EA10091DCC8 /* CoordinatorTestTests */,
 				059EAD8127277EA10091DCC8 /* CoordinatorTestUITests */,
+				4D5D93222743F0C800699B99 /* WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -477,7 +589,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D5D9314274138FB00699B99 /* URLSchemeView.storyboard in Resources */,
 				4D53DF2D2740CA380022B600 /* LocalNotificationView.storyboard in Resources */,
 				4D5D930F2741051D00699B99 /* CoreSpotlightView.storyboard in Resources */,
 				4D5D931727416FEA00699B99 /* UniversalLinksView.storyboard in Resources */,
@@ -485,8 +596,10 @@
 				05C5FA14272B7E5700A61007 /* Tab2SecondView.storyboard in Resources */,
 				4DF43E1B273EC08E00FC8699 /* GoogleService-Info.plist in Resources */,
 				059EAD7227277EA10091DCC8 /* LaunchScreen.storyboard in Resources */,
+				4D5D93432743F40000699B99 /* ShortCutItemView.storyboard in Resources */,
 				059EAD6F27277EA10091DCC8 /* Assets.xcassets in Resources */,
 				059EADB2272818830091DCC8 /* Tab1ThirdView.storyboard in Resources */,
+				4D5D933F2743F39200699B99 /* OpenURLView.storyboard in Resources */,
 				059EAD6D27277E9F0091DCC8 /* Tab1FirstView.storyboard in Resources */,
 				05C5FA0B272B78C000A61007 /* Tab2FirstView.storyboard in Resources */,
 				4D53DF312740CA940022B600 /* RemoteNotificationView.storyboard in Resources */,
@@ -505,6 +618,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D5D93212743F0C800699B99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D5D932D2743F0CE00699B99 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,8 +747,8 @@
 				4D5D93192741705E00699B99 /* UniversalLinksViewController.swift in Sources */,
 				059EADC027284B340091DCC8 /* TabBarController.swift in Sources */,
 				059EADB6272819200091DCC8 /* ViewCoordinator.swift in Sources */,
-				4D5D9312274138CF00699B99 /* URLSchemeViewController.swift in Sources */,
 				059EADBA272819E20091DCC8 /* SecondCoordinator.swift in Sources */,
+				4D5D933D2743F38100699B99 /* OpenURLViewController.swift in Sources */,
 				059EAD6A27277E9F0091DCC8 /* Tab1FirstViewController.swift in Sources */,
 				05C5FA0E272B7AA000A61007 /* Tab2FirstCoordinator.swift in Sources */,
 				059EADB0272818780091DCC8 /* Tab1ThirdViewController.swift in Sources */,
@@ -635,9 +756,11 @@
 				059EAD6627277E9F0091DCC8 /* AppDelegate.swift in Sources */,
 				059EAD6827277E9F0091DCC8 /* SceneDelegate.swift in Sources */,
 				059EADBC27281B5D0091DCC8 /* ThirdCoordinator.swift in Sources */,
+				4D5D93412743F3EC00699B99 /* ShortCutItemViewController.swift in Sources */,
 				4D53DF2B2740CA220022B600 /* LocalNotificationViewController.swift in Sources */,
 				4D5D930D2741050A00699B99 /* CoreSpotlightViewController.swift in Sources */,
 				059EADB8272819390091DCC8 /* Coordinator.swift in Sources */,
+				4D5D93302743F0CE00699B99 /* Widget.intentdefinition in Sources */,
 				05C5FA18272C1FA200A61007 /* Tab2SecondCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +782,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D5D931F2743F0C800699B99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D5D932F2743F0CE00699B99 /* Widget.intentdefinition in Sources */,
+				4D5D932A2743F0C800699B99 /* TestWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -671,6 +803,11 @@
 			isa = PBXTargetDependency;
 			target = 059EAD6127277E9F0091DCC8 /* CoordinatorTest */;
 			targetProxy = 059EAD8327277EA10091DCC8 /* PBXContainerItemProxy */;
+		};
+		4D5D93322743F0CE00699B99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D5D93222743F0C800699B99 /* WidgetExtension */;
+			targetProxy = 4D5D93312743F0CE00699B99 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -814,6 +951,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B972FC40D99A3CEFC310685E /* Pods-CoordinatorTest.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CoordinatorTest/CoordinatorTest.entitlements;
@@ -846,6 +984,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A81D2322C6C595023582F7D6 /* Pods-CoordinatorTest.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CoordinatorTest/CoordinatorTest.entitlements;
@@ -974,6 +1113,62 @@
 			};
 			name = Release;
 		};
+		4D5D93352743F0CE00699B99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2XG799ZL5A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tbskgm.CoordinatorTest.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D5D93362743F0CE00699B99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2XG799ZL5A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tbskgm.CoordinatorTest.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1009,6 +1204,15 @@
 			buildConfigurations = (
 				059EAD9327277EA10091DCC8 /* Debug */,
 				059EAD9427277EA10091DCC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D5D93372743F0CE00699B99 /* Build configuration list for PBXNativeTarget "WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D5D93352743F0CE00699B99 /* Debug */,
+				4D5D93362743F0CE00699B99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
