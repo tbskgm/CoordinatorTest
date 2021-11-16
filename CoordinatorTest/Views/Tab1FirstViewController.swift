@@ -39,7 +39,12 @@ class Tab1FirstViewController: UIViewController {
                 print("\(e)")
             }
         }
+        
+        let shortcut = UIMutableApplicationShortcutItem(type: "UIApplicationShortcutIconTypePlay", localizedTitle: "SEARCH", localizedSubtitle: "再生する", icon: UIApplicationShortcutIcon(type: .play), userInfo: nil)
+        UIApplication.shared.shortcutItems = [shortcut]
+        
     }
+    
     
     func addNotification() {
         let content = UNMutableNotificationContent()

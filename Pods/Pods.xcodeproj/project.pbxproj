@@ -1348,7 +1348,7 @@
 		A51070E81B80449532714074532A90BC /* FIRDependency.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDependency.m; path = FirebaseCore/Sources/FIRDependency.m; sourceTree = "<group>"; };
 		A5707671634581260A5CEA602211E0BA /* GDTCORTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORTransformer.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORTransformer.h; sourceTree = "<group>"; };
 		A5D043B0AE9BB14C32EA00B775F7351B /* FirebaseCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseCore.modulemap; sourceTree = "<group>"; };
-		A6304DF1BED2A4DD2867C33D44B743E1 /* Pods-CoordinatorTest */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CoordinatorTest"; path = Pods_CoordinatorTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6304DF1BED2A4DD2867C33D44B743E1 /* Pods_CoordinatorTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoordinatorTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E4E778CACA37648C41CFAA803A576F /* nanopb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.release.xcconfig; sourceTree = "<group>"; };
 		A6F34AE62B5644C13B1615B2808D9F61 /* FBLPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromise.h; path = Sources/FBLPromises/include/FBLPromise.h; sourceTree = "<group>"; };
 		A7B5C98F8A810ABFADEDF2EB7BDE2919 /* NSURLSession+GULPromises.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+GULPromises.m"; path = "GoogleUtilities/Environment/URLSessionPromiseWrapper/NSURLSession+GULPromises.m"; sourceTree = "<group>"; };
@@ -1880,7 +1880,7 @@
 				856B5CD56F194FAD26EA91620B66D614 /* GoogleDataTransport.framework */,
 				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
-				A6304DF1BED2A4DD2867C33D44B743E1 /* Pods-CoordinatorTest */,
+				A6304DF1BED2A4DD2867C33D44B743E1 /* Pods_CoordinatorTest.framework */,
 				161CE96F8FAB120B63080A8CD6BAA379 /* Pods-CoordinatorTest-CoordinatorTestUITests */,
 				A2A36AC16D4A4773518C256A05C34085 /* Pods-CoordinatorTestTests */,
 				3347A1AB6546F0A3977529B8F199DC41 /* FBLPromises.framework */,
@@ -3030,7 +3030,7 @@
 			);
 			name = "Pods-CoordinatorTest";
 			productName = Pods_CoordinatorTest;
-			productReference = A6304DF1BED2A4DD2867C33D44B743E1 /* Pods-CoordinatorTest */;
+			productReference = A6304DF1BED2A4DD2867C33D44B743E1 /* Pods_CoordinatorTest.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4402AFF83DBDC4DD07E198685FDC2DF2 /* FirebaseCore */ = {
