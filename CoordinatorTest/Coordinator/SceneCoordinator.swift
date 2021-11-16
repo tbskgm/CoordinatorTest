@@ -12,6 +12,9 @@ class SceneCoordinator: Coordinator {
     var tabBarCoordinator: TabBarCoordinator?
     let launchType: LaunchType
     
+    // TODO: 下記のプロパティが３つもあるのでうまく統合すること
+    private let gcmMessageIDKey = "gcm.message_id"
+    
     enum LaunchType {
         case normal
         case notification(_ notification: UNNotificationRequest)
@@ -39,11 +42,24 @@ class SceneCoordinator: Coordinator {
             window.rootViewController = tabBarController
             
         case .notification(let request):
-            if request.trigger is UNPushNotificationTrigger { // remote
+            if request.trigger is UNPushNotificationTrigger {
                 // remote notification
-            } else if request.trigger is UNTimeIntervalNotificationTrigger { // local
+                let userInfo = request.content.userInfo
+                
+                if let messageID = userInfo[gcmMessageIDKey] {
+                    print("Message ID: \(messageID)")
+                }
+                print(userInfo)
+                
+                // 遷移先画面の作成
+                let storyboard = UIStoryboard(name: "RemoteNotificationView", bundle: nil)
+                let viewController = storyboard.instantiateInitialViewController() as! RemoteNotificationViewController
+                window.rootViewController = viewController
+            } else if request.trigger is UNTimeIntervalNotificationTrigger {
                 // local notification
-                window.rootViewController = UIViewController()
+                let storyboard = UIStoryboard(name: "LocalNotificationView", bundle: nil)
+                let viewController = storyboard.instantiateInitialViewController() as! LocalNotificationViewController
+                window.rootViewController = viewController
             }
         }
     }
