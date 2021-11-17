@@ -22,11 +22,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Touch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccn-UQ-Gai">
+                                <rect key="frame" x="170.5" y="478.5" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ccn-UQ-Gai" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9we-do-w3v"/>
                             <constraint firstItem="Ho4-8O-r34" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HTq-dh-Sdz"/>
+                            <constraint firstItem="Ccn-UQ-Gai" firstAttribute="top" secondItem="Ho4-8O-r34" secondAttribute="bottom" constant="20" id="Kuh-v3-Ss1"/>
                             <constraint firstItem="Ho4-8O-r34" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="nMb-E9-cEx"/>
                         </constraints>
                     </view>
