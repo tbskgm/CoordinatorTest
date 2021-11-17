@@ -74,7 +74,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let window = self.window else {
             return
         }
-        let url = URLContexts.first!.url
+        //let url = URLContexts.first!.url
         let launchType: SceneCoordinator.LaunchType = .openURL
         let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
         sceneCoordinator.start()
