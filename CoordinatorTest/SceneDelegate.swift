@@ -27,18 +27,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if connectionOptions.notificationResponse != nil {
             // 通知
             launchType = .notification((connectionOptions.notificationResponse?.notification.request)!)
-        }
-        else if connectionOptions.userActivities.first != nil {
+        } else if connectionOptions.handoffUserActivityType == "Siri" {
+            launchType = .siriShortCutItem
+        } else if connectionOptions.userActivities.first != nil {
             // spotlight
             let userActivity = connectionOptions.userActivities.first
             launchType = .userActivity(userActivity!)
-        }
-        else if connectionOptions.urlContexts.first?.url != nil {
+        } else if connectionOptions.urlContexts.first?.url != nil {
             // openURL
-            //launchType = .openURL(connectionOptions.urlContexts.first!.url)
             launchType = .openURL
-        }
-        else if connectionOptions.shortcutItem != nil {
+        } else if connectionOptions.shortcutItem != nil {
             // Quick Action(3D Touch)
             launchType = .shortCutItem(connectionOptions.shortcutItem!)
         } else {
@@ -53,7 +51,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
     }
     
-    // バックグラウンド時のspotlightが呼ばれる
+    /// バックグラウンド時のspotlightが呼ばれる
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         guard let window = self.window else {
             return
@@ -61,6 +59,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let launchType: SceneCoordinator.LaunchType!
         if userActivity.activityType == "ConfigurationIntent" {
             launchType = .openURL
+        } else if userActivity.activityType == "Siri" {
+            launchType = .siriShortCutItem
         } else {
             launchType = .userActivity(userActivity)
         }
@@ -84,8 +84,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     /// バックグラウンド時のQuick Action(3D Tuch)
     func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem) async -> Bool {
         guard let window = self.window else {
-            fatalError("後で実装")
-            // return
+            return false
         }
         let launchType: SceneCoordinator.LaunchType = .shortCutItem(shortcutItem)
         let sceneCoordinator = SceneCoordinator(window: window, launchType: launchType)
@@ -93,6 +92,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.sceneCoordinator = sceneCoordinator
         return true
     }
+    
+    /// Siri
+    
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

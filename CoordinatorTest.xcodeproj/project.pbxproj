@@ -36,6 +36,9 @@
 		05C5FA18272C1FA200A61007 /* Tab2SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5FA17272C1FA200A61007 /* Tab2SecondCoordinator.swift */; };
 		3E3EF9AD021F99D91FA25782 /* Pods_CoordinatorTest_CoordinatorTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B18911AD66740F6FCCF5E7A /* Pods_CoordinatorTest_CoordinatorTestUITests.framework */; };
 		41AB7F2C0600722EF252131A /* Pods_CoordinatorTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F79B34717D8A956F486FA77 /* Pods_CoordinatorTest.framework */; };
+		4D182F882745662100719B94 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4D182F872745662100719B94 /* Intents.intentdefinition */; };
+		4D182F8B2745691C00719B94 /* SiriShortCutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D182F8A2745691C00719B94 /* SiriShortCutViewController.swift */; };
+		4D182F8D2745692E00719B94 /* SiriShortCutView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D182F8C2745692E00719B94 /* SiriShortCutView.storyboard */; };
 		4D53DF2B2740CA220022B600 /* LocalNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D53DF2A2740CA220022B600 /* LocalNotificationViewController.swift */; };
 		4D53DF2D2740CA380022B600 /* LocalNotificationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DF2C2740CA380022B600 /* LocalNotificationView.storyboard */; };
 		4D53DF312740CA940022B600 /* RemoteNotificationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D53DF302740CA940022B600 /* RemoteNotificationView.storyboard */; };
@@ -134,6 +137,9 @@
 		2744BE8D042FA2F7EB925091 /* Pods-CoordinatorTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTestTests.debug.xcconfig"; path = "Target Support Files/Pods-CoordinatorTestTests/Pods-CoordinatorTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3882A1529308A10D8F6A8AA8 /* Pods-CoordinatorTest-CoordinatorTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoordinatorTest-CoordinatorTestUITests.release.xcconfig"; path = "Target Support Files/Pods-CoordinatorTest-CoordinatorTestUITests/Pods-CoordinatorTest-CoordinatorTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4B18911AD66740F6FCCF5E7A /* Pods_CoordinatorTest_CoordinatorTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoordinatorTest_CoordinatorTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D182F872745662100719B94 /* Intents.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		4D182F8A2745691C00719B94 /* SiriShortCutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortCutViewController.swift; sourceTree = "<group>"; };
+		4D182F8C2745692E00719B94 /* SiriShortCutView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SiriShortCutView.storyboard; sourceTree = "<group>"; };
 		4D53DF2A2740CA220022B600 /* LocalNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationViewController.swift; sourceTree = "<group>"; };
 		4D53DF2C2740CA380022B600 /* LocalNotificationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocalNotificationView.storyboard; sourceTree = "<group>"; };
 		4D53DF302740CA940022B600 /* RemoteNotificationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RemoteNotificationView.storyboard; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 				059EAD7327277EA10091DCC8 /* Info.plist */,
 				4DF43E1A273EC08E00FC8699 /* GoogleService-Info.plist */,
 				4DF43E1C273F4CC800FC8699 /* CoordinatorTest.entitlements */,
+				4D182F872745662100719B94 /* Intents.intentdefinition */,
 			);
 			path = CoordinatorTest;
 			sourceTree = "<group>";
@@ -363,6 +370,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4D182F89274568F900719B94 /* Siri */ = {
+			isa = PBXGroup;
+			children = (
+				4D182F8A2745691C00719B94 /* SiriShortCutViewController.swift */,
+				4D182F8C2745692E00719B94 /* SiriShortCutView.storyboard */,
+			);
+			path = Siri;
+			sourceTree = "<group>";
+		};
 		4D53DF292740C9DD0022B600 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +386,7 @@
 				4D5D933B2743F31700699B99 /* UserActivity */,
 				4D5D93392743F2BE00699B99 /* OpenURL */,
 				4D5D93382743F2B700699B99 /* ShortCutItem */,
+				4D182F89274568F900719B94 /* Siri */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -589,6 +606,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D182F8D2745692E00719B94 /* SiriShortCutView.storyboard in Resources */,
 				4D53DF2D2740CA380022B600 /* LocalNotificationView.storyboard in Resources */,
 				4D5D930F2741051D00699B99 /* CoreSpotlightView.storyboard in Resources */,
 				4D5D931727416FEA00699B99 /* UniversalLinksView.storyboard in Resources */,
@@ -745,6 +763,7 @@
 				059EADC427284BE10091DCC8 /* TabBarCoordinator.swift in Sources */,
 				05C5FA09272B78A400A61007 /* Tab2FirstViewController.swift in Sources */,
 				4D5D93192741705E00699B99 /* UniversalLinksViewController.swift in Sources */,
+				4D182F882745662100719B94 /* Intents.intentdefinition in Sources */,
 				059EADC027284B340091DCC8 /* TabBarController.swift in Sources */,
 				059EADB6272819200091DCC8 /* ViewCoordinator.swift in Sources */,
 				059EADBA272819E20091DCC8 /* SecondCoordinator.swift in Sources */,
@@ -756,6 +775,7 @@
 				059EAD6627277E9F0091DCC8 /* AppDelegate.swift in Sources */,
 				059EAD6827277E9F0091DCC8 /* SceneDelegate.swift in Sources */,
 				059EADBC27281B5D0091DCC8 /* ThirdCoordinator.swift in Sources */,
+				4D182F8B2745691C00719B94 /* SiriShortCutViewController.swift in Sources */,
 				4D5D93412743F3EC00699B99 /* ShortCutItemViewController.swift in Sources */,
 				4D53DF2B2740CA220022B600 /* LocalNotificationViewController.swift in Sources */,
 				4D5D930D2741050A00699B99 /* CoreSpotlightViewController.swift in Sources */,

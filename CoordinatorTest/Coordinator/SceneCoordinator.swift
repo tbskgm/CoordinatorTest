@@ -20,9 +20,9 @@ class SceneCoordinator: Coordinator {
         case normal
         case notification(_ notification: UNNotificationRequest)
         case userActivity(NSUserActivity)
-        //case openURL(URL)
         case openURL
         case shortCutItem(UIApplicationShortcutItem)
+        case siriShortCutItem
     }
     
     init(window: UIWindow, launchType: LaunchType) {
@@ -85,8 +85,12 @@ class SceneCoordinator: Coordinator {
                 window.rootViewController = UIViewController()
             case "ConfigurationIntent":
                 let storyboard = UIStoryboard(name: "OpenURLView", bundle: nil)
-                    let viewController = storyboard.instantiateInitialViewController() as! OpenURLViewController
-                    window.rootViewController = viewController
+                let viewController = storyboard.instantiateInitialViewController() as! OpenURLViewController
+                window.rootViewController = viewController
+            case "Siri":
+                let storyboard = UIStoryboard(name: "SiriShortCutView", bundle: nil)
+                let viewController = storyboard.instantiateInitialViewController() as! SiriShortCutViewController
+                window.rootViewController = viewController
             default:
                 fatalError("Unreachable userActivity: ’\(userActivity.activityType)'")
             }
@@ -97,6 +101,10 @@ class SceneCoordinator: Coordinator {
         case .shortCutItem(_):
             let storyboard = UIStoryboard(name: "ShortCutItemView", bundle: nil)
             let viewController = storyboard.instantiateInitialViewController() as! ShortCutItemViewController
+            window.rootViewController = viewController
+        case .siriShortCutItem:
+            let storyboard = UIStoryboard(name: "SiriShortCutView", bundle: nil)
+            let viewController = storyboard.instantiateInitialViewController() as! SiriShortCutViewController
             window.rootViewController = viewController
         }
     }

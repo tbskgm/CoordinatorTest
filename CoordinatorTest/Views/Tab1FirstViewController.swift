@@ -84,7 +84,20 @@ class Tab1FirstViewController: UIViewController {
         addNotification()
     }
     
+    /// 画面遷移ボタン
     @IBAction func button(_ sender: Any) {
         delegate?.push()
     }
+    
+    /// Siriボタン
+    @IBAction func siriButton(_ sender: Any) {
+        let activity = NSUserActivity(activityType: "Siri")
+        activity.title = "call Siri"
+        activity.isEligibleForSearch = true
+        activity.isEligibleForPrediction = true
+        
+        self.userActivity = activity
+        self.userActivity?.becomeCurrent()
+    }
+    
 }

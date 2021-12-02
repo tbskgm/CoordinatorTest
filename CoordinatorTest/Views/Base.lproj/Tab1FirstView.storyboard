@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="874-nj-isN">
-                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
+                                <rect key="frame" x="166" y="432.5" width="82" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="画面遷移"/>
                                 <connections>
                                     <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hA1-kF-Gy9"/>
                                 </connections>
@@ -32,6 +32,14 @@
                                     <action selector="notificationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OuN-pB-C5U"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbd-hb-mrO">
+                                <rect key="frame" x="163" y="534.5" width="88" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Siriボタン"/>
+                                <connections>
+                                    <action selector="siriButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8Q-sE-qtm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,6 +48,8 @@
                             <constraint firstItem="874-nj-isN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFe-Q3-jkS"/>
                             <constraint firstItem="2MQ-Ez-7Gf" firstAttribute="top" secondItem="874-nj-isN" secondAttribute="bottom" constant="20" id="VC3-8x-JDD"/>
                             <constraint firstItem="2MQ-Ez-7Gf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eT8-yV-HgM"/>
+                            <constraint firstItem="gbd-hb-mrO" firstAttribute="top" secondItem="2MQ-Ez-7Gf" secondAttribute="bottom" constant="20" id="in2-Zp-Q3Z"/>
+                            <constraint firstItem="gbd-hb-mrO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t8A-5B-N1i"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Ned-nT-gKn"/>
